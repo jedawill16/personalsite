@@ -1,4 +1,70 @@
-#logo {
-    width: 50px; 
-    height: 100px;
+header {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+}
+
+body {
+    font-family: "sorts-mill-goudy", serif;
+}
+
+.logo-container {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    width: max-width;
+}
+
+.logo {
+    max-width: 100%;
+    width: 500px;
+    position: relative;
+    z-index: 10;
+}
+
+@media (max-width: 768px) {
+    .logo {
+      max-width: 50%; /* Adjust as needed */
+      height: auto;
+    }
+  }
+
+.navbar-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar-container-left {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    display: flex; 
+    position: relative;
+    flex-direction: row;
+}
+
+.navbar-container-right {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    position: relative;
+    flex-direction: row;
+}
+
+.nav-link {
+    padding: 0.5rem 1rem;
+    margin: 0 1rem;
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-size: x-large;
+    
+}
+
+.nav-link:hover {
+    color: #C2A3DA;
+
 }
