@@ -1,70 +1,76 @@
-header {
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-
-}
-
 body {
     font-family: "sorts-mill-goudy", serif;
+    overflow-x: hidden;
 }
 
-.logo-container {
-    display: flex; 
-    justify-content: center;
+.container-1 {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
     align-items: center;
-    width: max-width;
+    max-width: 100%;
+}
+
+.container-3 {
+    display: flex; 
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    max-width: 100%;
+}
+
+.container-2 {
+    display: flex;
+    max-width: 500px;
+    height: auto;
+    margin: auto; 
 }
 
 .logo {
-    max-width: 100%;
-    width: 500px;
-    position: relative;
-    z-index: 10;
+    max-width: 500px;
 }
 
-@media (max-width: 768px) {
-    .logo {
-      max-width: 50%; /* Adjust as needed */
-      height: auto;
-    }
-  }
-
-.navbar-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.navbar-container-left {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
+#left-side {
     display: flex; 
-    position: relative;
     flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.navbar-container-right {
+#right-side { 
     display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-    position: relative;
     flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;
 }
 
-.nav-link {
+.nav-link { 
     padding: 0.5rem 1rem;
-    margin: 0 1rem;
-    display: block;
+    margin: 0 1rem; 
+    display: flex;
     text-decoration: none;
     color: black;
     font-size: x-large;
+    text-decoration: none;
+}
+
+@media (max-width: 500px) {
+    .logo {
+        flex-wrap: nowrap;
+    }
+
+    #left-side {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    #right-side {
+        flex-wrap: wrap-reverse;
+        flex-direction: row-reverse;
+    }
     
 }
 
 .nav-link:hover {
     color: #C2A3DA;
-
 }
