@@ -3,74 +3,63 @@ body {
     overflow-x: hidden;
 }
 
-.container-1 {
+.container-0 {
     display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    align-items: center;
-    max-width: 100%;
-}
-
-.container-3 {
-    display: flex; 
-    justify-content: space-evenly;
-    flex-direction: row;
-    align-items: center;
-    max-width: 100%;
-}
-
-.container-2 {
-    display: flex;
-    max-width: 500px;
-    height: auto;
-    margin: auto; 
+    justify-content: center;
 }
 
 .logo {
-    max-width: 500px;
+    width: 40%;
 }
 
-#left-side {
-    display: flex; 
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-#right-side { 
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    flex-wrap: wrap;
+.container-1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 1px; 
+    max-width: 100%;
+    align-items: center;
 }
 
 .nav-link { 
-    padding: 0.5rem 1rem;
-    margin: 0 1rem; 
-    display: flex;
     text-decoration: none;
     color: black;
     font-size: x-large;
     text-decoration: none;
-}
-
-@media (max-width: 500px) {
-    .logo {
-        flex-wrap: nowrap;
-    }
-
-    #left-side {
-        flex-wrap: wrap;
-        flex-direction: row;
-    }
-
-    #right-side {
-        flex-wrap: wrap-reverse;
-        flex-direction: row-reverse;
-    }
-    
+    display: flex; 
+    justify-content: center; 
+    flex-direction: row;
 }
 
 .nav-link:hover {
-    color: #C2A3DA;
+    text-decoration: underline;
+    text-decoration-color: #C2A3DA;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .container-1 {
+        grid-template-columns: 1fr;
+        align-items: center;
+        max-width: 100%;
+    }
+
+    .container-0 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .logo {
+        width: 100%;
+    }
+
+    .nav-link {
+        font-size: medium;
+    }
+
+    .nav-link:hover {
+        text-decoration: underline;
+        text-decoration-color: #C2A3DA;
+    }
+    
 }
