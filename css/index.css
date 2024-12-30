@@ -1,0 +1,223 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Space Mono', monospace;
+  color: rgb(0, 0, 0);
+  background-image: url("/images/backgnd.png");
+  background-size: cover;
+  background-attachment:fixed;
+  overflow-y: auto; /* Allow vertical scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+
+#navigation {
+  display: flex; /* Arrange items in a row */
+  justify-content: center;
+  padding: 10px 0; /* Add padding for height */
+  flex-direction: column;
+}
+
+/* Style for the navigation bar */
+.vertical-nav {
+  display: flex; /* Flexbox ensures horizontal layout */
+  justify-content: center; /* Centers the nav items horizontally */
+  padding: 10px 0; /* Padding for spacing */
+}
+
+/* Style for the navigation list */
+.vertical-nav ul {
+  display: flex; /* Ensure list items are arranged horizontally */
+    list-style: none; /* Remove default bullets */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    gap: 20px; /* Add space between nav items */
+}
+
+/* Style for navigation links */
+.vertical-nav ul li {
+  margin: 10px 0; /* Adds spacing between items */
+}
+
+.vertical-nav ul li a {
+  text-decoration: none; /* Remove underline from links */
+  color: rgb(0, 0, 0); /* White text color */
+  padding: 10px 20px; /* Add padding inside the links */
+  display: block; /* Makes the links block-level for easier clicking */
+  border-radius: 5px; /* Adds rounded corners */
+  transition: transform .3s ease-in-out;
+}
+
+/* Hover effect for links */
+.vertical-nav ul li a:hover {
+  transform-origin: left;
+  transform: scaleX(1);
+  transition: transform .3s ease-in-out;
+}
+
+.vertical-nav ul li a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.vertical-nav ul li a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #000000;
+  bottom: 0;
+  left: 0;
+  transform-origin: left; 
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+
+
+#frontpage {
+  display: flex;
+  flex-direction: row;
+}
+
+
+#leftside {
+  display: flex;
+  flex-direction: column;
+  max-width: 85%; 
+  padding-left: 4%; 
+  padding-top: 12%; 
+  padding-right: 5%;
+  position: relative;
+  color: #333;
+}
+
+.content {
+  font-size: 60px;  
+}
+
+.underline {
+  display: flex; 
+  flex: column;
+  bottom: 0; /* Position it below the text */
+  left: 0;
+  width: 0; /* Start with no width */
+  height: 2px; /* Thickness of the underline */
+  background-color: rgb(224, 9, 9); /* Maroon or desired color */
+  animation: underline-animation 6s infinite; /* Infinite repeating animation */
+}
+
+@keyframes underline-animation {
+  0% {
+    width: 0; /* Start with no underline */
+    left: 0; /* Start at the left */
+    opacity: 0; /* Fully visible */
+}
+50% {
+    width: 70%; /* Fully underline the text */
+    left: 0; /* Stays aligned with the text */
+    opacity: 1; /* Fully visible */
+}
+100% {
+    width: 70%; /* Shrinks to zero width */
+    left: 100%; /* Moves completely off the screen */
+    opacity: 0; /* Fades out */
+}
+}
+
+.msg {
+  font-size: 17px;
+  text-align: left;
+  flex-shrink: 3;
+}
+
+
+#rightside {
+  display: flex; 
+  flex-direction: row;
+  padding-top: 3.5%;
+  height: 155%; 
+  padding-right: 4%;
+}
+
+#bar {
+  display: block; /* Ensure it's a block-level element */
+  padding-top: 10%;
+    position: fixed; /* Or fixed, depending on desired behavior */
+    bottom: 0; /* Pin it to the bottom of the viewport */
+    left: 0; /* Start from the very left */
+    width: 100%; /* Make it stretch across the entire width of the screen */
+    height: 120px; /* Adjust the height as desired */
+    background: linear-gradient(
+        to right,
+        rgb(233, 156, 156),
+        rgb(237, 102, 102),
+        rgb(205, 56, 56),
+        rgb(153, 17, 17));
+    margin: 0; /* Remove any default margins */
+    padding: 0; /* Remove any padding if present */
+}
+
+.buttons { 
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Spacing between the buttons */
+  margin-top: 20px; /* Add spacing from the top content */
+}
+
+.btn {
+  text-decoration: none; /* Remove underline from links */
+  font-size: 16px; /* Adjust the font size */
+  padding: 10px 20px; /* Add padding for the button size */
+  border-radius: 10px; /* Rounded corners */
+  color: rgb(0, 0, 0); /* Button text color */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+  display: inline-block; /* Ensure button-like appearance */
+}
+
+/* LinkedIn Button */
+.btn-linkedin {
+  background-color: #cf3333; /* LinkedIn blue */
+  border: 1px solid #005582;
+}
+
+.btn-linkedin:hover {
+  background-color:#0077b5; /* Darker blue on hover */
+}
+
+/* Resume Button */
+.btn-resume {
+  background-color: #333; /* Dark gray */
+  border: 1px solid #222;
+}
+
+.btn-resume:hover {
+  background-color: #555; /* Lighter gray on hover */
+}
+
+
+/* Keyframes */
+@keyframes fill {
+    0% {
+      width: 0%;
+      height: 1px;
+    }
+    50% {
+      width: 100%;
+      height: 1px;
+    }
+    100% {
+      width: 100%;
+      height: 100%;
+      background: #333;
+    }
+  }
+
+
+
+
+
+
+
